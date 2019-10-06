@@ -1,0 +1,59 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Mkdocs Setup\n\n\nUbuntu Installation\n\n\nPython\n\n\nIn order to manually install MkDocs you'll need \nPython\n installed on your\nsystem, as well as the Python package manager, \npip\n. You can check if you have\nthese already installed from the command line:\n\n\n$ python --version\nPython 2.7.14\n$ pip --version\npip 18.1 from /usr/local/lib/python2.7/site-packages/pip (python 2.7)\n\n\n\n\nMkDocs supports Python versions 2.7.9+, 3.4, 3.5, 3.6, 3.7, and pypy.\n\n\nInstall \nPython\n by downloading an installer appropriate for your system from\n\npython.org\n and running it.\n\n\nPip\n\n\nIf you're using a recent version of Python, the Python package manager, \npip\n,\nis most likely installed by default. However, you may need to upgrade pip to the\nlasted version:\n\n\npip install --upgrade pip\n\n\n\n\nIf you need to install \npip\n for the first time, download \nget-pip.py\n.\nThen run the following command to install it:\n\n\npython get-pip.py\n\n\n\n\nMkdocs\n\n\nInstall Mkdocs with the ubuntu package manager.\n\n\nsudo apt install mkdocs\n\n\n\n\nYou can also install Mkdocs with pip if you prefer.\n\n\npip install mkdocs\n\n\n\n\nYou should now have the \nmkdocs\n command installed on your system. Run \nmkdocs\n--version\n to check that everything worked okay.\n\n\n$ mkdocs --version\nmkdocs, version 0.15.3\n\n\n\n\n\n\nGetting Started\n\n\nGetting started is super easy.\n\n\nmkdocs new my-project\ncd my-project\n\n\n\n\nThere's a single configuration file named \nmkdocs.yml\n, and a folder named\n\ndocs\n that will contain your documentation source files. Right now the \ndocs\n\nfolder just contains a single documentation page, named \nindex.md\n.\n\n\nMkDocs comes with a built-in dev-server that lets you preview your documentation\nas you work on it. Make sure you're in the same directory as the \nmkdocs.yml\n\nconfiguration file, and then start the server by running the \nmkdocs serve\n\ncommand:\n\n\n$ mkdocs serve\nINFO    -  Building documentation...\nINFO    -  Cleaning site directory\n[I 160402 15:50:43 server:271] Serving on http://127.0.0.1:8000\n[I 160402 15:50:43 handlers:58] Start watching changes\n[I 160402 15:50:43 handlers:60] Start detecting changes\n\n\n\n\nOpen up \nhttp://127.0.0.1:8000/\n in your browser, and you'll see the default\nhome page being displayed.\n\n\nThe dev-server also supports auto-reloading, and will rebuild your documentation\nwhenever anything in the configuration file, documentation directory, or theme\ndirectory changes.\n\n\nOpen the \ndocs/index.md\n document in your text editor of choice, change the\ninitial heading to \nMkLorum\n, and save your changes. Your browser will\nauto-reload and you should see your updated documentation immediately.\n\n\nNow try editing the configuration file: \nmkdocs.yml\n. Change the\n[\nsite_name\n][site_name] setting to \nMkLorum\n and save the file.\n\n\nsite_name: MkLorum\n\n\n\n\nYour browser should immediately reload, and you'll see your new site name take\neffect.\n\n\nAdding pages\n\n\nNow add a second page to your documentation:\n\n\ncurl 'https://jaspervdj.be/lorem-markdownum/markdown.txt' > docs/about.md\n\n\n\n\nAs our documentation site will include some navigation headers, you may want to\nedit the configuration file and add some information about the order, title, and\nnesting of each page in the navigation header by adding a [\nnav\n][nav]\nsetting:\n\n\nsite_name: MkLorum\nnav:\n    - Home: index.md\n    - About: about.md\n\n\n\n\nChanging the Favicon Icon\n\n\nBy default, MkDocs uses the \nMkDocs favicon\n icon. To use a different icon, create\nan \nimg\n subdirectory in your \ndocs\n directory and copy your custom \nfavicon.ico\n file\nto that directory. MkDocs will automatically detect and use that file as your\nfavicon icon.\n\n\nBuilding the site\n\n\nThat's looking good. You're ready to deploy the first pass of your \nMkLorum\n\ndocumentation. First build the documentation:\n\n\nmkdocs build\n\n\n\n\nDeploying\n\n\nThe documentation site that you just built only uses static files so you'll be\nable to host it from pretty much anywhere. Just upload the contents\nof the entire \nsite\n directory to wherever you're hosting your website from and\nyou're done. \n\n\nWhen using Github Pages, create a new repository, create a \ndocs\n folder, and upload the \ncontents\n of your \nsite\n directory. Then go to the Settings tab in the repository and scroll down until you see a Github Pages section. When picking what source you would like to use, select \nmaster branch /docs folder\n and your Github Page will be live. \n\n\nIf you want to use a custom domain with Github Pages, \nclick here to learn more\n.",
+            "title": "Home"
+        },
+        {
+            "location": "/#mkdocs-setup",
+            "text": "",
+            "title": "Mkdocs Setup"
+        },
+        {
+            "location": "/#ubuntu-installation",
+            "text": "",
+            "title": "Ubuntu Installation"
+        },
+        {
+            "location": "/#python",
+            "text": "In order to manually install MkDocs you'll need  Python  installed on your\nsystem, as well as the Python package manager,  pip . You can check if you have\nthese already installed from the command line:  $ python --version\nPython 2.7.14\n$ pip --version\npip 18.1 from /usr/local/lib/python2.7/site-packages/pip (python 2.7)  MkDocs supports Python versions 2.7.9+, 3.4, 3.5, 3.6, 3.7, and pypy.  Install  Python  by downloading an installer appropriate for your system from python.org  and running it.",
+            "title": "Python"
+        },
+        {
+            "location": "/#pip",
+            "text": "If you're using a recent version of Python, the Python package manager,  pip ,\nis most likely installed by default. However, you may need to upgrade pip to the\nlasted version:  pip install --upgrade pip  If you need to install  pip  for the first time, download  get-pip.py .\nThen run the following command to install it:  python get-pip.py",
+            "title": "Pip"
+        },
+        {
+            "location": "/#mkdocs",
+            "text": "Install Mkdocs with the ubuntu package manager.  sudo apt install mkdocs  You can also install Mkdocs with pip if you prefer.  pip install mkdocs  You should now have the  mkdocs  command installed on your system. Run  mkdocs\n--version  to check that everything worked okay.  $ mkdocs --version\nmkdocs, version 0.15.3",
+            "title": "Mkdocs"
+        },
+        {
+            "location": "/#getting-started",
+            "text": "Getting started is super easy.  mkdocs new my-project\ncd my-project  There's a single configuration file named  mkdocs.yml , and a folder named docs  that will contain your documentation source files. Right now the  docs \nfolder just contains a single documentation page, named  index.md .  MkDocs comes with a built-in dev-server that lets you preview your documentation\nas you work on it. Make sure you're in the same directory as the  mkdocs.yml \nconfiguration file, and then start the server by running the  mkdocs serve \ncommand:  $ mkdocs serve\nINFO    -  Building documentation...\nINFO    -  Cleaning site directory\n[I 160402 15:50:43 server:271] Serving on http://127.0.0.1:8000\n[I 160402 15:50:43 handlers:58] Start watching changes\n[I 160402 15:50:43 handlers:60] Start detecting changes  Open up  http://127.0.0.1:8000/  in your browser, and you'll see the default\nhome page being displayed.  The dev-server also supports auto-reloading, and will rebuild your documentation\nwhenever anything in the configuration file, documentation directory, or theme\ndirectory changes.  Open the  docs/index.md  document in your text editor of choice, change the\ninitial heading to  MkLorum , and save your changes. Your browser will\nauto-reload and you should see your updated documentation immediately.  Now try editing the configuration file:  mkdocs.yml . Change the\n[ site_name ][site_name] setting to  MkLorum  and save the file.  site_name: MkLorum  Your browser should immediately reload, and you'll see your new site name take\neffect.",
+            "title": "Getting Started"
+        },
+        {
+            "location": "/#adding-pages",
+            "text": "Now add a second page to your documentation:  curl 'https://jaspervdj.be/lorem-markdownum/markdown.txt' > docs/about.md  As our documentation site will include some navigation headers, you may want to\nedit the configuration file and add some information about the order, title, and\nnesting of each page in the navigation header by adding a [ nav ][nav]\nsetting:  site_name: MkLorum\nnav:\n    - Home: index.md\n    - About: about.md",
+            "title": "Adding pages"
+        },
+        {
+            "location": "/#changing-the-favicon-icon",
+            "text": "By default, MkDocs uses the  MkDocs favicon  icon. To use a different icon, create\nan  img  subdirectory in your  docs  directory and copy your custom  favicon.ico  file\nto that directory. MkDocs will automatically detect and use that file as your\nfavicon icon.",
+            "title": "Changing the Favicon Icon"
+        },
+        {
+            "location": "/#building-the-site",
+            "text": "That's looking good. You're ready to deploy the first pass of your  MkLorum \ndocumentation. First build the documentation:  mkdocs build",
+            "title": "Building the site"
+        },
+        {
+            "location": "/#deploying",
+            "text": "The documentation site that you just built only uses static files so you'll be\nable to host it from pretty much anywhere. Just upload the contents\nof the entire  site  directory to wherever you're hosting your website from and\nyou're done.   When using Github Pages, create a new repository, create a  docs  folder, and upload the  contents  of your  site  directory. Then go to the Settings tab in the repository and scroll down until you see a Github Pages section. When picking what source you would like to use, select  master branch /docs folder  and your Github Page will be live.   If you want to use a custom domain with Github Pages,  click here to learn more .",
+            "title": "Deploying"
+        }
+    ]
+}

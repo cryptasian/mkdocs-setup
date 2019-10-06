@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  <link rel="shortcut icon" href="./img/favicon.ico">
+  <title>Home - Mkdocs Setup</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="./css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Home";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = "/";
+  </script>
+  
+  <script src="./js/jquery-2.1.1.min.js"></script>
+  <script src="./js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="./js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> Mkdocs Setup</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href=".">Home</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#mkdocs-setup">Mkdocs Setup</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#ubuntu-installation">Ubuntu Installation</a></li>
+        
+            <li><a class="toctree-l3" href="#getting-started">Getting Started</a></li>
+        
+            <li><a class="toctree-l3" href="#adding-pages">Adding pages</a></li>
+        
+            <li><a class="toctree-l3" href="#changing-the-favicon-icon">Changing the Favicon Icon</a></li>
+        
+            <li><a class="toctree-l3" href="#building-the-site">Building the site</a></li>
+        
+            <li><a class="toctree-l3" href="#deploying">Deploying</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">Mkdocs Setup</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="mkdocs-setup">Mkdocs Setup</h1>
+<h2 id="ubuntu-installation">Ubuntu Installation</h2>
+<h3 id="python">Python</h3>
+<p>In order to manually install MkDocs you'll need <a href="https://www.python.org/">Python</a> installed on your
+system, as well as the Python package manager, <a href="https://pip.readthedocs.io/en/stable/installing/">pip</a>. You can check if you have
+these already installed from the command line:</p>
+<pre><code class="bash">$ python --version
+Python 2.7.14
+$ pip --version
+pip 18.1 from /usr/local/lib/python2.7/site-packages/pip (python 2.7)
+</code></pre>
+
+<p>MkDocs supports Python versions 2.7.9+, 3.4, 3.5, 3.6, 3.7, and pypy.</p>
+<p>Install <a href="https://www.python.org/">Python</a> by downloading an installer appropriate for your system from
+<a href="https://www.python.org/downloads/">python.org</a> and running it.</p>
+<h3 id="pip">Pip</h3>
+<p>If you're using a recent version of Python, the Python package manager, <a href="https://pip.readthedocs.io/en/stable/installing/">pip</a>,
+is most likely installed by default. However, you may need to upgrade pip to the
+lasted version:</p>
+<pre><code class="bash">pip install --upgrade pip
+</code></pre>
+
+<p>If you need to install <a href="https://pip.readthedocs.io/en/stable/installing/">pip</a> for the first time, download <a href="https://bootstrap.pypa.io/get-pip.py">get-pip.py</a>.
+Then run the following command to install it:</p>
+<pre><code class="bash">python get-pip.py
+</code></pre>
+
+<h3 id="mkdocs">Mkdocs</h3>
+<p>Install Mkdocs with the ubuntu package manager.</p>
+<pre><code class="bash">sudo apt install mkdocs
+</code></pre>
+
+<p>You can also install Mkdocs with pip if you prefer.</p>
+<pre><code class="bash">pip install mkdocs
+</code></pre>
+
+<p>You should now have the <code>mkdocs</code> command installed on your system. Run <code>mkdocs
+--version</code> to check that everything worked okay.</p>
+<pre><code class="bash">$ mkdocs --version
+mkdocs, version 0.15.3
+</code></pre>
+
+<hr />
+<h2 id="getting-started">Getting Started</h2>
+<p>Getting started is super easy.</p>
+<pre><code class="bash">mkdocs new my-project
+cd my-project
+</code></pre>
+
+<p>There's a single configuration file named <code>mkdocs.yml</code>, and a folder named
+<code>docs</code> that will contain your documentation source files. Right now the <code>docs</code>
+folder just contains a single documentation page, named <code>index.md</code>.</p>
+<p>MkDocs comes with a built-in dev-server that lets you preview your documentation
+as you work on it. Make sure you're in the same directory as the <code>mkdocs.yml</code>
+configuration file, and then start the server by running the <code>mkdocs serve</code>
+command:</p>
+<pre><code class="bash">$ mkdocs serve
+INFO    -  Building documentation...
+INFO    -  Cleaning site directory
+[I 160402 15:50:43 server:271] Serving on http://127.0.0.1:8000
+[I 160402 15:50:43 handlers:58] Start watching changes
+[I 160402 15:50:43 handlers:60] Start detecting changes
+</code></pre>
+
+<p>Open up <code>http://127.0.0.1:8000/</code> in your browser, and you'll see the default
+home page being displayed.</p>
+<p>The dev-server also supports auto-reloading, and will rebuild your documentation
+whenever anything in the configuration file, documentation directory, or theme
+directory changes.</p>
+<p>Open the <code>docs/index.md</code> document in your text editor of choice, change the
+initial heading to <code>MkLorum</code>, and save your changes. Your browser will
+auto-reload and you should see your updated documentation immediately.</p>
+<p>Now try editing the configuration file: <code>mkdocs.yml</code>. Change the
+[<code>site_name</code>][site_name] setting to <code>MkLorum</code> and save the file.</p>
+<pre><code class="yaml">site_name: MkLorum
+</code></pre>
+
+<p>Your browser should immediately reload, and you'll see your new site name take
+effect.</p>
+<h2 id="adding-pages">Adding pages</h2>
+<p>Now add a second page to your documentation:</p>
+<pre><code class="bash">curl 'https://jaspervdj.be/lorem-markdownum/markdown.txt' &gt; docs/about.md
+</code></pre>
+
+<p>As our documentation site will include some navigation headers, you may want to
+edit the configuration file and add some information about the order, title, and
+nesting of each page in the navigation header by adding a [<code>nav</code>][nav]
+setting:</p>
+<pre><code class="yaml">site_name: MkLorum
+nav:
+    - Home: index.md
+    - About: about.md
+</code></pre>
+
+<h2 id="changing-the-favicon-icon">Changing the Favicon Icon</h2>
+<p>By default, MkDocs uses the <a href="./img/favicon.ico">MkDocs favicon</a> icon. To use a different icon, create
+an <code>img</code> subdirectory in your <code>docs</code> directory and copy your custom <code>favicon.ico</code> file
+to that directory. MkDocs will automatically detect and use that file as your
+favicon icon.</p>
+<h2 id="building-the-site">Building the site</h2>
+<p>That's looking good. You're ready to deploy the first pass of your <code>MkLorum</code>
+documentation. First build the documentation:</p>
+<pre><code class="bash">mkdocs build
+</code></pre>
+
+<h2 id="deploying">Deploying</h2>
+<p>The documentation site that you just built only uses static files so you'll be
+able to host it from pretty much anywhere. Just upload the contents
+of the entire <code>site</code> directory to wherever you're hosting your website from and
+you're done. </p>
+<p>When using Github Pages, create a new repository, create a <code>docs</code> folder, and upload the <strong>contents</strong> of your <code>site</code> directory. Then go to the Settings tab in the repository and scroll down until you see a Github Pages section. When picking what source you would like to use, select <code>master branch /docs folder</code> and your Github Page will be live. </p>
+<p>If you want to use a custom domain with Github Pages, <a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/">click here to learn more</a>.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script src="./js/theme.js"></script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 0.16.3
+Build Date UTC : 2019-10-06 05:12:14
+-->
