@@ -1,5 +1,6 @@
 # Mkdocs Setup
 Adapted from the original [Mkdocs documentation].
+
 [Mkdocs documentation]: https://www.mkdocs.org/
 
 ## Ubuntu Installation
